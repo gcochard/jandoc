@@ -238,7 +238,7 @@ module.exports = (function () {
      */
     if (err || !stdout) {
       console.error('ERROR: Could not find Pandoc on your system.\n       Please make sure Haskell and Pandoc are installed before running Jandoc.');
-      process.exit(1);
+      throw new Error('Could not find Pandoc on your system. Please make sure Haskell and Pandoc are installed before running Jandoc');
     }
   });
 
